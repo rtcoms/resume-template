@@ -20,14 +20,18 @@
         <div class="title-bar">
 
           <!-- Your title is also defined in the _config.yml file -->
-          <h2 class="header-title">{{ site.resume_title }}</h2>
+          <h2 class="header-title" style="padding-top: 7px;">{{ site.resume_title }}</h2>
 
           <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
           {% include icon-links.html %}
+          <ul style="float:right;paddingtop:0;" class="icon-links">
+            <li>Email:86.rohit@gmail.com</li>
+            <li>Phone: (+91)7259615636</li>
+          </ul>
         </div>
 
         <div class="executive-summary">
-          <p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but K.I.S.S.</p>
+          <p>As a passionate web developer I have worked with startup, MNC and SME in 6+ years of my career. I am a Ruby on Rails expert and worked in domain of crowd-funding and e-commerce. I am always looking for more challenging opportunities in field of web development involving latest technologies</p>
         </div>
 
         {% if site.resume_looking_for_work == 'yes' %}
@@ -49,31 +53,61 @@
 
         <!-- Duplicate these resume-item elements and edit accordingly for each job you want to add here -->
         <div class="resume-item">
-          <h3 class="resume-item-title">Springfield Nuclear Power Plant</h3>
-          <h4 class="resume-item-details">Safety Inspector &bull; Nov, 1980 &mdash; Present</h4>
-          <p class="resume-item-copy">Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points:</p>
+          <h3 class="resume-item-title">Milaap Social Venture Pvt Ltd</h3>
+          <h4 class="resume-item-details">Technical Lead &bull; Jan, 2016 &mdash; Present</h4>
+          <h4 class="resume-item-details">Senior Engineer &bull; Jan, 2013 &mdash; Dec, 2015</h4>
+          <h4 class="resume-item-details">Software Engineer &bull; Feb, 2012 &mdash; Dec, 2012</h4>
+          <p class="resume-item-copy">Milaap is largest crowd-funding platform in Asia and I was one of the first few members of tech team. Worked on complex problems involving detailed requirement analysis, conceptualization, database design, development, code reviews and deployment. I worked on many of the core features of our product, mainly</p>
           <ul class="resume-item-list">
-            <li>Ate lots of donuts</li>
-            <li>Fell asleep rarely</li>
-            <li>Left promptly at end of day (sometimes earlier)</li>
+            <li>Initiated implementation of React.js on front-end</li>
+            <li>Admin interface to manage inventory, content and customer requests</li>
+            <li>Third party integration with Salesforce and Cloudinary</li>
+            <li>Social Authentication using google and facebook</li>
+            <li>Social Activity Feed(https://milaap.org/timeline) implementation using pub-sub mechanism</li>
+            <li>On-the-fly image re-sizing for responsive images</li>
+            <li>Payment gateway(Indian and International both) integration</li>
+            <li>Migrated our app from Rails 3.2 to Rails 4.2 .</li>
+            <li>Test cases using rspec( BDD )</li>
           </ul>
-          <p class="resume-item-copy">If you're going to copy paste markup, or edit it, just be sure to keep the appropriate classnames on your new elements for styling purposes.</p>
+          <p class="resume-item-copy">Led and Mentored freshers and junior developers in rails development stack.</p>
+
+          <p class="resume-item-copy"><b>Technologies/libraries used :</b> Ruby on Rails (3.2 to 4.1), Postgres, Git, jQuery, ElasticSearch, Bower, Bootstrap, Sass, Coffeescript, Rspec, Capistrano, Unicorn, AWS, S3 cloud storage, ActiveAdmin. Devise, carrierwave, ActiveAdmin, payment gateway integration, salesforce integration</p>
 
         </div><!-- end of resume-item -->
 
         <!-- another resume item -->
         <div class="resume-item">
-          <h3 class="resume-item-title">Sir Putt-A-Lot's Merrie Olde Fun Centre</h3>
-          <h4 class="resume-item-details">Windmill Crank Operator &bull; Jun, 1978 &mdash; Sept, 1979</h4>
-          <p class="resume-item-copy">If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.</p>
+          <h3 class="resume-item-title">Vinayak Solutions Pvt Ltd</h3>
+          <h4 class="resume-item-details">Ruby on Rails Developer &bull; Mar, 2011 &mdash; Sep, 2011</h4>
+          <p class="resume-item-copy">
+            Worked on various web applications based on Ruby on Rails in Behaviour driven development(BDD) using rspec .Worked with clients on requirement analysis, application architecture and application development
+          </p>
+          <p class="resume-item-copy">
+            <b>Projects : </b></br>
+            <ul class="resume-item-list">
+              <li><strong>Infomob.com</strong> – Implemented LinkedIn like social activity stream, follow-unfollow features like twitter and invite friends (Doesn't exist anymore)</li>
+              <li><strong>Freysmiles</strong> – Did some maintenance related tasks with strict deadlines.(http://www.freysmiles.com/)</li>
+            </ul>
+          </p>
+
 
         </div><!-- end of resume-item -->
 
         <!-- by now you're getting the picture... -->
         <div class="resume-item">
-          <h3 class="resume-item-title">Simpson Lazer Tag</h3>
-          <h4 class="resume-item-details">Front Desk Attendant &bull; Jun, 1975 &mdash; May, 1978</h4>
-          <p class="resume-item-copy">Boy, when Marge first told me she was going to the Police Academy, I thought it would be fun and exciting, you know, like the movie... Spaceballs. But instead, it's been painful and disturbing, like the movie Police Academy.</p>
+          <h3 class="resume-item-title">Infosys Technologies Ltd.</h3>
+          <!-- <h4 class="resume-item-details">System Engineer &bull; Aug, 2009 &mdash; Feb, 2011</h4> -->
+          <h4 class="resume-item-details">System Engineer</h4>
+          <p class="resume-item-copy">Worked in PE(Product Engineering) Department on a networking project which is mainly concerned to layer 2 and 3. protocols of TCP/IP architecture. As a part of develoment team my responsibilities were :</p>
+          <ul class="resume-item-list">
+            <li>Resolution of software defects in software DSLAM domain.</li>
+            <li>Develop solution with efficient and reusable code</li>
+            <li>Enforce best of class software practices</li>
+            <li>Ensure good communication with other teams</li>
+          </ul>
+          <p class="resume-item-copy">Also developed web base GUI for version control system using Perl/CGI/HTML/CSS/Javascript</p></br>
+          <h4 class="resume-item-details">System Engineer Trainee</h4>
+          <p class="resume-item-copy">As a fresher I went under five months of rigorous training in J2EE framework based web application development. Other topics covered were C, SQL, HTML/CSS/JavaScript, UI design, Database design, Software Engineering, UNIX and Data Structures & algorithms. Attended separate sessions on professional practices, communication skills, team work and Leadership skills</p>
 
         </div><!-- end of resume-item -->
 
@@ -89,11 +123,52 @@
           <h2>Education</h2>
         </header>
 
-        <div class="resume-item">
-          <h3 class="resume-item-title">Springfield College</h3>
-          <h4 class="resume-item-details">Associates Degree, Business Management &bull; 1984 &mdash; 1986</h4>
+        <!-- <div class="resume-item">
+          <h3 class="resume-item-title">University of Rajasthan</h3>
+          <h4 class="resume-item-details">B.E., Computer Science &bull; 2005 &mdash; 2009 - 68.7%</h4>
           <p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>
         </div>
+        <div class="resume-item">
+          <h3 class="resume-item-title">GSSS, Salumber</h3>
+          <h4 class="resume-item-details">Class XII(Science) &bull; 2003 - 77.4%</h4>
+          <p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>
+        </div>
+        <div class="resume-item">
+          <h3 class="resume-item-title">GSSS, Salumber</h3>
+          <h4 class="resume-item-details">Class X &bull; 2001 - 74.8%</h4>
+          <p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>
+        </div> -->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Year</th>
+                    <th>Institute/Board/University</th>
+                    <th>%age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.E. (Computer Science)</td>
+                    <td>2005 - 2009</td>
+                    <td>University of Rajasthan, Kota</td>
+                    <td>68.7%</td>
+                </tr>
+                <tr>
+                    <td>XII Science</td>
+                    <td>2003</td>
+                    <td>GSSS, Salumber (BSE , Rajasthan)</td>
+                    <td>77.4%</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>2001</td>
+                    <td>GSSS, Salumber (BSE , Rajasthan)</td>
+                    <td>74.8%</td>
+                </tr>
+            </tbody>
+        </table>
 
       </section>
       <!-- end Education -->
@@ -223,10 +298,10 @@
       <!-- end Links -->
       {% endif %}
 
-      <footer class="page-footer">
+      <!-- <footer class="page-footer">
         <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
         <p class="footer-line">If this is your live resume, you can modify or remove this part. ;-)</p>
-      </footer>
+      </footer> -->
 
     </div>
 
