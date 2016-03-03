@@ -20,14 +20,45 @@
         <div class="title-bar">
 
           <!-- Your title is also defined in the _config.yml file -->
-          <h2 class="header-title" style="padding-top: 7px;">{{ site.resume_title }}</h2>
+          <!-- <h2 class="header-title" style="padding-top: 7px;">{{ site.resume_title }}</h2> -->
 
           <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
           {% include icon-links.html %}
-          <ul style="float:right;paddingtop:0;" class="icon-links">
+          <!-- <ul style="float:right;paddingtop:0;" class="icon-links">
             <li>Email:86.rohit@gmail.com</li>
             <li>Phone: (+91)7259615636</li>
-          </ul>
+          </ul> -->
+          <style type="text/css">
+            #actual-table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            #actual-table td {
+              width: 33.33%;
+              padding: 4px;
+              vertical-align: center;
+              text-align: center;
+            }
+            #actual-table td:nth-child(even) {
+              background: #ccc;
+            }
+            #actual-table td:nth-child(odd) {
+              background: #eee;
+            }
+          </style>
+          <table id="actual-table">
+          <tr>
+            <td>Technical Lead</td>
+            <td>Bangalore</td>
+            <td>
+              <ul class="personal-details">
+                <li>Email:86.rohit@gmail.com</li>
+                <li>Phone: (+91)-7259615636</li>
+              </ul>
+            </td>
+          </tr>
+          </table>
+
         </div>
 
         <div class="executive-summary">
@@ -43,6 +74,25 @@
 
       </header>
 
+      {% if site.resume_section_skills %}
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Skills</h2>
+        </header>
+        <ul>
+          <li>Ruby (>=1.8), Rails (>=3.2), Metaprogramming, Rspec, CoffeeScript, Jquery, React.js(Beginner)</li>
+          <li>Jquery, CoffeeScript, React.js</li>
+          <li>RDBMS, OOPS, Data Structure, Algorithms, Agile SCRUM, MVC</li>
+          <li>Postgres/MySQL RDBMS Redis</li>
+          <li>Linux Ubuntu, MacOS, Git, SublimeText</li>
+        </ul>
+
+      </section>
+      <!-- end Skills -->
+      {% endif %}
+
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
       <section class="content-section">
@@ -54,9 +104,9 @@
         <!-- Duplicate these resume-item elements and edit accordingly for each job you want to add here -->
         <div class="resume-item">
           <h3 class="resume-item-title">Milaap Social Venture Pvt Ltd</h3>
-          <h4 class="resume-item-details">Technical Lead &bull; Jan, 2016 &mdash; Present</h4>
-          <h4 class="resume-item-details">Senior Engineer &bull; Jan, 2013 &mdash; Dec, 2015</h4>
-          <h4 class="resume-item-details">Software Engineer &bull; Feb, 2012 &mdash; Dec, 2012</h4>
+          <h5 class="resume-item-details">Technical Lead &bull; Jan, 2016 &mdash; Present</h5>
+          <h5 class="resume-item-details">Senior Engineer &bull; Jan, 2013 &mdash; Dec, 2015</h5>
+          <h5 class="resume-item-details">Software Engineer &bull; Feb, 2012 &mdash; Dec, 2012</h5>
           <p class="resume-item-copy">Milaap is largest crowd-funding platform in Asia and I was one of the first few members of tech team. Worked on complex problems involving detailed requirement analysis, conceptualization, database design, development, code reviews and deployment. I worked on many of the core features of our product, mainly</p>
           <ul class="resume-item-list">
             <li>Initiated implementation of React.js on front-end</li>
@@ -97,7 +147,7 @@
         <div class="resume-item">
           <h3 class="resume-item-title">Infosys Technologies Ltd.</h3>
           <!-- <h4 class="resume-item-details">System Engineer &bull; Aug, 2009 &mdash; Feb, 2011</h4> -->
-          <h4 class="resume-item-details">System Engineer</h4>
+          <h4 class="resume-item-details">System Engineer &bull; Aug, 2009 &mdash; Feb, 2011</h4>
           <p class="resume-item-copy">Worked in PE(Product Engineering) Department on a networking project which is mainly concerned to layer 2 and 3. protocols of TCP/IP architecture. As a part of develoment team my responsibilities were :</p>
           <ul class="resume-item-list">
             <li>Resolution of software defects in software DSLAM domain.</li>
@@ -156,13 +206,13 @@
                     <td>68.7%</td>
                 </tr>
                 <tr>
-                    <td>XII Science</td>
+                    <td>Class XII (Science)</td>
                     <td>2003</td>
                     <td>GSSS, Salumber (BSE , Rajasthan)</td>
                     <td>77.4%</td>
                 </tr>
                 <tr>
-                    <td>X</td>
+                    <td>Class X</td>
                     <td>2001</td>
                     <td>GSSS, Salumber (BSE , Rajasthan)</td>
                     <td>74.8%</td>
@@ -174,56 +224,58 @@
       <!-- end Education -->
       {% endif %}
 
+      <br/><br/><br/><br/>
+
       {% if site.resume_section_projects %}
       <!-- begin Projects -->
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Projects</h2>
+          <h2>Projects and online presence</h2>
         </header>
 
         <div class="resume-item">
-          <h3 class="resume-item-title"><a href="http://donutlocator.io">donutfinder.io</a></h3>
-          <h4 class="resume-item-details">Founder & Primary Developer &bull; 2012 &mdash; Present</h4>
-          <p class="resume-item-copy">Donut Locator is an open source node/ember app that lets users find donuts within a defined radius from their home.</p>
+          <h3 class="resume-item-title"><a href="https://milaap.org">milaap.org</a></h3>
+          <h4 class="resume-item-details">Core Developer &bull; 2012 &mdash; Present</h4>
+          <p class="resume-item-copy">Implemented core features of largest crowdfunding platform in Asia</p>
         </div>
 
         <div class="resume-item">
-          <h3 class="resume-item-title">Springfield Donut Eater's User Group</h3>
-          <h4 class="resume-item-details">Co-Founder & Organizer &bull; 2007 &mdash; Present</h4>
-          <p class="resume-item-copy">DEUG is a local monthly meetup in Springfield where we share all the latest tips and tricks for dat donut lifestyle. I organize the group, and typically eat most of the donuts.</p>
+          <h3 class="resume-item-title"><a href="http://printsend.co">printsend.co</a></h3>
+          <h4 class="resume-item-details">Primary Developer &bull; 2015</h4>
+          <p class="resume-item-copy">Created MVP from scratch as a freelance project.</p>
         </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title"><a href="https://rubygems.org/gems/update_filter">update_filter</a></h3>
+          <h4 class="resume-item-details">Primary Developer &bull; 2012</h4>
+          <p class="resume-item-copy">A ruby library to enhance hooks on ActiveRecord models.</p>
+        </div>
+
+        <p class="resume-item-copy">
+          <b>Other Projects : </b></br>
+          <ul class="resume-item-list">
+            <li>Contributed to easy_rails_money gem : https://github.com/Milaap/easy_rails_money/tree/rails41</li>
+            <li><strong>Freysmiles</strong> – Did some maintenance related tasks with strict deadlines.(http://www.freysmiles.com/)</li>
+
+          </ul>
+        </p>
+
+        <p class="resume-item-copy">
+          <b>Online presence : </b></br>
+          <ul class="resume-item-list">
+            <li> Github profile : <a href="https://github.com/rtcoms">https://github.com/rtcoms</a></li>
+            <li> StackOverflow profile : <a href="http://stackoverflow.com/users/386803/rtcoms">http://stackoverflow.com/users/386803/rtcoms</a></li>
+            <li> LinkedIn profile : <a href="http://in.linkedin.com/pub/rohit-trivedi/9/6a9/716">http://in.linkedin.com/pub/rohit-trivedi/9/6a9/716</a></li>
+
+          </ul>
+        </p>
 
       </section>
       <!-- end Projects -->
       {% endif %}
 
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
 
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Donut design</h4>
-          <p class="resume-item-copy">Sprinkle art, icing design, eclair management, taste testing, donut/coffee pairing research</p>
-        </div>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Craft beer brewing</h4>
-          <p class="resume-item-copy">Hops inspection, brew testing, distribution management, bottle label design, festival and event management</p>
-        </div>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Family leadership</h4>
-          <p class="resume-item-copy">Bread winning, conflict resolution, couch inspection, TV longevity testing</p>
-        </div>
-
-      </section>
-      <!-- end Skills -->
-      {% endif %}
 
       {% if site.resume_section_recognition %}
       <!-- begin Recognition -->

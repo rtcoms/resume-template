@@ -18,7 +18,7 @@
 
 // page header styles
 
-.page-header { padding: 1.5rem 0;
+.page-header { padding: 0.5rem 0;
 
   .avatar {
     width: 95px;
@@ -62,7 +62,7 @@
   }
 
   .executive-summary {
-    @include media_larger_than_mobile { font-size: 1.0rem; }
+    @include media_larger_than_mobile { font-size: 0.9rem; }
   }
 }
 
@@ -96,6 +96,34 @@
   }
 }
 
+
+
+.personal-details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-align: center;
+
+  @include media_larger_than_mobile {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .personal-detail-item {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .personal-detail { display: inline-block;
+
+    &:hover .icon path {
+      fill: #333;
+      @include transition(all .2s ease);
+    }
+  }
+}
+
 .contact-button {
   @include border-radius(3px);
   background-color: #efefef;
@@ -121,7 +149,7 @@
 // resume content styles
 
 .content-section {
-  margin: 0 0 3rem;
+  margin: 0 0 1rem;
 
   .resume-item { margin-bottom: 2rem; }
 
@@ -134,9 +162,9 @@
   }
 
   .resume-item-details {
-    font-size: 1.125rem;
+    font-size: 1.0rem;
     margin: 0 0 .75rem;
-    line-height: 1;
+    line-height: 0.5;
   }
 
   .resume-item-title,
